@@ -5,8 +5,6 @@ module.exports = {
   content: [
     './*.{html,js}',
     './**/*.{html,js}',
-    './**/**/*.{html,js}',
-    './src/**/*.{html,js}',
   ],
   theme: {
     extend: {
@@ -43,7 +41,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'),
-    // ['prettier-plugin-tailwindcss']
   ],
 }
 
