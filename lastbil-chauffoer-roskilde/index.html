@@ -7,55 +7,113 @@
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NJHHW9T9');</script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" as="style" href="app.min.css">
     <link href="app.min.css" rel="stylesheet">
-    <title>Bus chauffør &raquo; JUUL</title>
+    <title>Lastbil chauffør &raquo; JUUL</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=roboto:400,500,700,900&display=swap" rel="stylesheet" />
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body class="font-sans antialiased">
-<header class="relative">
-    <!-- Mobile -->
-    <div class="absolute z-10">
-        <!-- Secondary navigation -->
-        <div class="lg:hidden">
-            <div class="mx-auto max-w-7xl lg:px-6">
+<header class="relative" x-data="{ nav: false }">
+    <div class="absolute z-20 w-full">
+        <div class="mx-auto max-w-7xl">
+            <nav class="relative z-40 flex justify-between h-14 sm:h-auto">
                 <div class="flex items-center">
-                    <img width="230px" height="74px" class="ml-2 z-10 h-[74px] w-auto" alt="JUUL" loading="lazy" src="logo.svg">
+                    <div class="flex pl-2 sm:pl-4">
+                        <svg class="h-[56px] sm:top-3 w-auto sm:block sm:h-[74px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 688 220">
+                            <rect width="100%" height="100%" fill="#CC0000" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M110.3,134.2l-11.8,24.4h55.9c11.7,0,22.3-4.5,30-11.8c4-3.8,7.2-8.3,9.4-13.3c2-4.7,3.1-9.8,3.1-15.2V60.9h-25.5v57.2c0,2.1-0.4,4.2-1.2,6c-0.9,2-2.1,3.8-3.7,5.3c-3.1,2.9-7.4,4.8-12.1,4.8C154.4,134.2,110.3,134.2,110.3,134.2z" fill="#FFFFFF" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M535.2,134.2c-4.7,0-9-1.8-12.1-4.8c-1.6-1.5-2.9-3.3-3.7-5.3c-0.8-1.9-1.2-3.9-1.2-6v-4.2v-53h-25.5v57.4c0,5.4,1.1,10.5,3.1,15.2c2.2,5,5.4,9.5,9.4,13.3c7.7,7.3,18.3,11.8,30,11.8h55.9l-11.8-24.4L535.2,134.2L535.2,134.2z" fill="#FFFFFF" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M223.3,146.8c7.7,7.3,18.3,11.8,30,11.8H295c11.7,0,22.3-4.5,30-11.8c4-3.8,7.2-8.3,9.4-13.3c2-4.7,3.1-9.8,3.1-15.2V60.9H312v57.2c0,2.1-0.4,4.2-1.2,6c-0.9,2-2.1,3.8-3.7,5.3c-3.1,2.9-7.4,4.8-12.1,4.8h-41.7c-4.7,0-9-1.8-12.1-4.8c-1.6-1.5-2.9-3.3-3.7-5.3c-0.8-1.9-1.2-3.9-1.2-6V60.9h-25.5v57.5c0,5.4,1.1,10.5,3.1,15.2C216.1,138.6,219.3,143.1,223.3,146.8L223.3,146.8z" fill="#FFFFFF" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M365,146.8c7.7,7.3,18.3,11.8,30,11.8h41.7c11.7,0,22.3-4.5,30-11.8c4-3.8,7.2-8.3,9.4-13.3c2-4.7,3.1-9.8,3.1-15.2V60.9h-25.5v57.2c0,2.1-0.4,4.2-1.2,6c-0.9,2-2.1,3.8-3.7,5.3c-3.1,2.9-7.4,4.8-12.1,4.8H395c-4.7,0-9-1.8-12.1-4.8c-1.6-1.5-2.9-3.3-3.7-5.3c-0.8-1.9-1.2-3.9-1.2-6v-7.8V60.9h-25.5v57.5c0,5.4,1.1,10.5,3.1,15.2C357.8,138.6,361,143.1,365,146.8L365,146.8z" fill="#FFFFFF" />
+                        </svg>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="absolute z-10 w-full">
-        <div class="hidden lg:flex mx-auto max-w-7xl flex-shrink-0 items-center px-4 sm:px-6 lg:px-8">
-            <img width="230px" height="74px" alt="JUUL" class="z-10 h-[74px] w-auto" src="logo.svg">
+
+                <div class="flex items-center gap-x-5 sm:pr-2">
+                    <div
+                      x-trap="nav"
+                      x-on:keydown.escape.prevent.stop="nav = false"
+                      class="flex items-center"
+                    >
+                        <button
+                          @click="nav = ! nav"
+                          :aria-expanded="nav"
+                          :aria-label="nav ? 'Luk Navigation' : 'Åben Navigation'"
+                          type="button"
+                          class="relative z-10 -m-2 inline-flex h-8 w-8 items-center justify-center rounded-lg p-2 mr-3 md:mr-4 hover:bg-neutral-300/20 ui-not-focus-visible:outline-none"
+                        >
+                            <svg x-show="! nav" aria-hidden="true" class="h-3.5 w-3.5 overflow-visible stroke-neutral-50 active:stroke-white" fill="none" stroke-width="2" stroke-linecap="round">
+                                <path d="M0 1H14M0 7H14M0 13H14" />
+                            </svg>
+                            <svg x-show="nav" aria-hidden="true" class="h-3.5 w-3.5 overflow-visible stroke-neutral-50 active:stroke-white" fill="none" stroke-width="2" stroke-linecap="round" x-cloak>
+                                <path d="M2 2L12 12M12 2L2 12" />
+                            </svg>
+                        </button>
+
+                        <div>
+                            <div
+                              x-show="nav"
+                              x-transition:enter="transition ease-out duration-150"
+                              x-transition:enter-start="opacity-0"
+                              x-transition:enter-end="opacity-100"
+                              x-transition:leave="transition ease-in duration-150"
+                              x-transition:leave-start="opacity-100"
+                              x-transition:leave-end="opacity-0"
+                              aria-hidden="true"
+                              class="fixed inset-0 bg-slate-300/50 duration-150 px-12 data-[closed]:opacity-0 data-[enter]:ease-out data-[leave]:ease-in"
+                              x-cloak
+                            ></div>
+                            <div
+                              x-show="nav"
+                              @click.outside="nav = false"
+                              x-transition:enter="transition ease-out duration-150"
+                              x-transition:enter-start="opacity-0 scale-90"
+                              x-transition:enter-end="opacity-100 scale-100"
+                              x-transition:leave="transition ease-in duration-150"
+                              x-transition:leave-start="opacity-100 scale-100"
+                              x-transition:leave-end="opacity-0 scale-90"
+                              tabindex="-1"
+                              class="absolute inset-x-0 top-full mt-2 mx-3 sm:mx-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5 data-[closed]:scale-95 data-[closed]:opacity-0 data-[enter]:duration-150 data-[leave]:duration-100 data-[enter]:ease-out data-[leave]:ease-in md:w-1/2 md:right-0 md:left-auto md:max-w-md"
+                              x-cloak
+                            >
+                                <a href="https://www.amujuul.dk/kursuskalender/lastbil?kursus=c" rel="nofollow" class="block w-full px-2 py-1.5 my-1 rounded-md hover:bg-neutral-100 focus:bg-neutral-200 active:text-neutral-900">Se kommende kurser</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </div>
     </div>
 
-    <!-- video header -->
     <div class="bg-neutral-900">
         <div class="min-h-[70vh] min-h-[70svh]">
             <div class="relative">
-                <section class="relative overflow-hidden w-full h-[calc(100svh_-_4.6875rem)] md:min-h-[calc(5rem_*_4)]">
+                <section class="relative overflow-hidden w-full h-[calc(100svh_-_12rem)] md:min-h-[calc(5rem_*_4)]">
                     <div class="h-full w-full">
-                        <div class="relative grid grid-cols-[1fr] h-full w-full" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+                        <span class="absolute z-10 block h-20 -top-20 left-0 w-full shadow-[0_3rem_12rem_0_#000000]"></span>
+                        <div class="relative grid grid-cols-[1fr] h-full w-full">
                             <div class="relative aspect-video overflow-hidden h-full w-full lg:hidden">
                                 <video class="absolute top-0 bottom-0 left-0 right-0 h-full w-full object-cover transition-opacity duration-500 ease-in will-change-[opacity] lg:hidden" loop muted type="video/mp4" playsinline="playsinline" preload="none" autoplay>
-                                    <source src="video.mp4" type="video/mp4">
+                                    <source src="lastbil.mp4" type="video/mp4">
                                 </video>
                             </div>
                             <div class="hidden relative aspect-video overflow-hidden h-full w-full lg:block">
                                 <video class="hidden absolute bottom-0 left-0 h-full w-full object-cover right-0 top-0 transition-opacity duration-500 ease-in will-change-[opacity] lg:block" loop muted type="video/mp4" playsinline="playsinline" autoplay>
-                                    <source src="video.mp4" type="video/mp4">
+                                    <source src="lastbil.mp4" type="video/mp4">
                                 </video>
                             </div>
                         </div>
-                        <span class="absolute block h-20 left-0 top-full w-full" style="box-shadow: 0 -3rem 16rem #ffffff, .3rem -.3rem 2.5rem #171717"></span>
+                        <span class="absolute block h-20 left-0 top-full w-full shadow-[0_-3rem_16rem_#ffffff,0_-.3rem_2.5rem_#171717]"></span>
 
-                        <div class="relative z-10 bottom-1/2 place-items-center">
-                            <div class="p-4 sm:px-6 flex flex-col justify-center mx-auto max-w-7xl min-h-44 sm:min-h-56 lg:mt-8 lg:px-8 lg:pb-10">
-                                <div class="relative">
-                                    <h1 class="text-center uppercase tracking-wide text-3xl font-black text-white sm:text-3xl lg:text-6xl">Lastbil chauffør</h1>
+                        <div class="relative z-10 place-items-center bottom-1/3 xl:bottom-1/2">
+                            <div class="p-4 sm:px-6 flex flex-col justify-center mx-auto max-w-7xl lg:mt-8 lg:px-8 lg:pb-10">
+                                <h1 class="text-center uppercase tracking-wide text-3xl font-black text-white sm:text-3xl lg:text-6xl">Lastbil chauffør</h1>
+                                <div class="my-2">
+                                    <h2 class="text-center text-xl text-white sm:text-2xl lg:text-3xl">Bliv lastbilchauffør på kun 30 dage</h2>
                                 </div>
                             </div>
                         </div>
@@ -65,16 +123,15 @@
         </div>
     </div>
 </header>
-<nav class="relative overflow-x-auto flex bg-gray-50 border-b border-gray-200" aria-label="Breadcrumb">
+<nav class="relative overflow-x-auto flex bg-gray-50 border-b border-gray-200">
     <ol class="mx-auto max-w-7xl w-full px-4 flex space-x-2 sm:space-x-4 sm:px-6 lg:px-8 my-2">
         <li class="flex">
             <div class="flex items-center">
-                <a href="/" class="text-gray-400 hover:text-gray-500">
+                <div class="text-gray-400 hover:text-gray-500">
                     <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                     </svg>
-                    <span class="sr-only">Hjem</span>
-                </a>
+                </div>
             </div>
         </li>
         <li class="flex">
@@ -171,33 +228,14 @@
 <footer class="relative bg-neutral-900">
     <div class="max-w-7xl mx-auto pt-12 px-4 sm:px-6 lg:pt-12 lg:px-8">
         <div class="lg:grid lg:grid-cols-3 lg:gap-12 xl:grid-cols-3 xl:gap-12">
-            <div class="space-y-5 md:col-span-1 lg:border-r-2 lg:border-neutral-800 pb-12">
-                <img width="230px" height="65px" alt="JUUL" class="mb-5" loading="lazy" src="logo.svg">
-            </div>
-            <div class="col-span-2">
-                <h3 class="text-sm font-semibold text-white tracking-wider uppercase">Om JUUL</h3>
-                <div class="flex my-5">
-                    <div class="w-full max-w-2xl">
-                        <figure class="relative isolate pt-6 sm:pt-12">
-                            <svg viewBox="0 0 162 128" fill="none" aria-hidden="true" class="absolute left-0 top-0 -z-10 h-32 stroke-neutral-800">
-                                <path id="b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" d="M65.5697 118.507L65.8918 118.89C68.9503 116.314 71.367 113.253 73.1386 109.71C74.9162 106.155 75.8027 102.28 75.8027 98.0919C75.8027 94.237 75.16 90.6155 73.8708 87.2314C72.5851 83.8565 70.8137 80.9533 68.553 78.5292C66.4529 76.1079 63.9476 74.2482 61.0407 72.9536C58.2795 71.4949 55.276 70.767 52.0386 70.767C48.9935 70.767 46.4686 71.1668 44.4872 71.9924L44.4799 71.9955L44.4726 71.9988C42.7101 72.7999 41.1035 73.6831 39.6544 74.6492C38.2407 75.5916 36.8279 76.455 35.4159 77.2394L35.4047 77.2457L35.3938 77.2525C34.2318 77.9787 32.6713 78.3634 30.6736 78.3634C29.0405 78.3634 27.5131 77.2868 26.1274 74.8257C24.7483 72.2185 24.0519 69.2166 24.0519 65.8071C24.0519 60.0311 25.3782 54.4081 28.0373 48.9335C30.703 43.4454 34.3114 38.345 38.8667 33.6325C43.5812 28.761 49.0045 24.5159 55.1389 20.8979C60.1667 18.0071 65.4966 15.6179 71.1291 13.7305C73.8626 12.8145 75.8027 10.2968 75.8027 7.38572C75.8027 3.6497 72.6341 0.62247 68.8814 1.1527C61.1635 2.2432 53.7398 4.41426 46.6119 7.66522C37.5369 11.6459 29.5729 17.0612 22.7236 23.9105C16.0322 30.6019 10.618 38.4859 6.47981 47.558L6.47976 47.558L6.47682 47.5647C2.4901 56.6544 0.5 66.6148 0.5 77.4391C0.5 84.2996 1.61702 90.7679 3.85425 96.8404L3.8558 96.8445C6.08991 102.749 9.12394 108.02 12.959 112.654L12.959 112.654L12.9646 112.661C16.8027 117.138 21.2829 120.739 26.4034 123.459L26.4033 123.459L26.4144 123.465C31.5505 126.033 37.0873 127.316 43.0178 127.316C47.5035 127.316 51.6783 126.595 55.5376 125.148L55.5376 125.148L55.5477 125.144C59.5516 123.542 63.0052 121.456 65.9019 118.881L65.5697 118.507Z"></path>
-                                <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x="86"></use>
-                            </svg>
-                            <blockquote class="prose leading-8 text-white/90 sm:leading-9">
-                                <p>
-                                    JUUL er en af Danmarks største og ældste uddannelsesinstitutioner inden for ledelse, transport-, redder- og lager/logistik-uddannelser.
-                                </p>
-                                <p class="mt-4">
-                                    Vi er en 100% dansk familieejet virksomhed, der har hovedsæde i Roskilde, med uddannelsescentre i Roskilde, Køge, Hvidovre og Holbæk, og en lang række
-                                    udbud og samarbejdspartnere på tværs af landet. Vi udbyder ledelsesuddannelser indenfor kontor-, detail- og logistikområdet, samt uddannelser og
-                                    efteruddannelser inden for alle transportfaglige områder fx lastbil, bus, flextrafik, redning, gaffeltruck, farligt gods, vogntog, taxi,
-                                    vognmandsuddannelser med flere. Vi lægger vægt på uddannelser af høj kvalitet, og et højt serviceniveau over for både chauffører,
-                                    vognmænd og virksomheder. Vi har adgang til køretekniske anlæg med lastbiler, busser, gaffeltrucks, evakuerings- og brandøvelser osv., og uddanner herigennem borgere inden for en lang række centrale arbejdsfunktioner, som et bidrag til at øge sammenhængskraften på arbejdsmarkedet i Danmark.
-                                </p>
-                            </blockquote>
-                        </figure>
-                    </div>
-                </div>
+            <div class="space-y-5 md:col-span-1 lg:border-r-2 lg:border-neutral-800">
+                <svg class="h-[74px] w-auto" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 688 220">
+                    <rect width="100%" height="100%" fill="#CC0000" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M110.3,134.2l-11.8,24.4h55.9c11.7,0,22.3-4.5,30-11.8c4-3.8,7.2-8.3,9.4-13.3c2-4.7,3.1-9.8,3.1-15.2V60.9h-25.5v57.2c0,2.1-0.4,4.2-1.2,6c-0.9,2-2.1,3.8-3.7,5.3c-3.1,2.9-7.4,4.8-12.1,4.8C154.4,134.2,110.3,134.2,110.3,134.2z" fill="#FFFFFF" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M535.2,134.2c-4.7,0-9-1.8-12.1-4.8c-1.6-1.5-2.9-3.3-3.7-5.3c-0.8-1.9-1.2-3.9-1.2-6v-4.2v-53h-25.5v57.4c0,5.4,1.1,10.5,3.1,15.2c2.2,5,5.4,9.5,9.4,13.3c7.7,7.3,18.3,11.8,30,11.8h55.9l-11.8-24.4L535.2,134.2L535.2,134.2z" fill="#FFFFFF" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M223.3,146.8c7.7,7.3,18.3,11.8,30,11.8H295c11.7,0,22.3-4.5,30-11.8c4-3.8,7.2-8.3,9.4-13.3c2-4.7,3.1-9.8,3.1-15.2V60.9H312v57.2c0,2.1-0.4,4.2-1.2,6c-0.9,2-2.1,3.8-3.7,5.3c-3.1,2.9-7.4,4.8-12.1,4.8h-41.7c-4.7,0-9-1.8-12.1-4.8c-1.6-1.5-2.9-3.3-3.7-5.3c-0.8-1.9-1.2-3.9-1.2-6V60.9h-25.5v57.5c0,5.4,1.1,10.5,3.1,15.2C216.1,138.6,219.3,143.1,223.3,146.8L223.3,146.8z" fill="#FFFFFF" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M365,146.8c7.7,7.3,18.3,11.8,30,11.8h41.7c11.7,0,22.3-4.5,30-11.8c4-3.8,7.2-8.3,9.4-13.3c2-4.7,3.1-9.8,3.1-15.2V60.9h-25.5v57.2c0,2.1-0.4,4.2-1.2,6c-0.9,2-2.1,3.8-3.7,5.3c-3.1,2.9-7.4,4.8-12.1,4.8H395c-4.7,0-9-1.8-12.1-4.8c-1.6-1.5-2.9-3.3-3.7-5.3c-0.8-1.9-1.2-3.9-1.2-6v-7.8V60.9h-25.5v57.5c0,5.4,1.1,10.5,3.1,15.2C357.8,138.6,361,143.1,365,146.8L365,146.8z" fill="#FFFFFF" />
+                </svg>
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 border-t-2 border-neutral-800 text-xs text-white text-opacity-50 mt-12 py-4">
