@@ -17,7 +17,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body class="font-sans antialiased">
-<header class="relative" x-data="{ nav: false }">
+<header class="relative" x-data="{ nav: false }" x-ref="root">
     <div class="absolute z-20 w-full">
         <div class="mx-auto max-w-7xl">
             <nav class="relative z-40 flex justify-between h-14 sm:h-auto">
@@ -117,6 +117,16 @@
                                 </div>
                             </div>
                         </div>
+
+                        <a
+                            href="#"
+                            @click.prevent="scrollTo({top: $refs.root.scrollHeight, behavior: 'smooth'})"
+                            class="animate-bounce group absolute z-10 flex justify-center items-center size-8 bg-white bottom-5 left-1/2 -ml-4 rounded-full text-neutral-700 cursor-pointer text-center transition-all duration-200 hover:scale-110 focus:outline-none focus:ring focus:ring-white/30"
+                        >
+                            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </a>
                     </div>
                 </section>
             </div>
