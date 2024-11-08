@@ -7,6 +7,9 @@ module.exports = {
     './**/*.html',
   ],
   theme: {
+    fontFamily: {
+      'sans': ['Roboto'],
+    },
     extend: {
       colors: {
         'stiletto': {
@@ -41,6 +44,7 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'),
+    require('@tailwindcss/forms')
   ],
 }
 
