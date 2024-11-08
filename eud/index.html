@@ -268,10 +268,9 @@
                 class="relative w-full max-w-2xl overflow-y-auto rounded-xl bg-white p-12 shadow-lg"
             >
                 <!-- Title -->
-                <h3 class="text-3xl font-bold" :id="$id('modal-title')">Hør mere</h3>
+                <h3 class="text-3xl font-bold" :id="$id('modal-title')">Hør mere om JUUL Erhvervsuddannelser</h3>
 
                 <!-- Content -->
-                <p class="mt-2 text-gray-600">Hør mere om JUUL Erhvervsuddannelser.</p>
                 <p class="mt-2 text-gray-600">Udfyld dine kontaktoplysninger og så vil vi kontakte dig.</p>
 
                 <!-- Form -->
@@ -296,11 +295,7 @@
                                     </div>
                                     <div>
                                         <label for="phone" class="sr-only">Telefon</label>
-                                        <input type="text" name="phone" id="phone" autocomplete="tel" class="block w-full rounded-md border-gray-300 px-4 py-3 placeholder-gray-500 shadow-sm focus:border-sky-400 focus:ring-sky-400 disabled:bg-gray-200" placeholder="Telefon" x-model="data.phone" :disabled="success">
-                                    </div>
-                                    <div>
-                                        <label for="message" class="sr-only">Message</label>
-                                        <textarea id="message" name="message" rows="4" class="block w-full rounded-md border-gray-300 px-4 py-3 placeholder-gray-500 shadow-sm focus:border-sky-400 focus:ring-sky-400 disabled:bg-gray-200" placeholder="Besked..." required x-model="data.message" :disabled="success"></textarea>
+                                        <input type="text" name="phone" id="phone" autocomplete="tel" class="block w-full rounded-md border-gray-300 px-4 py-3 placeholder-gray-500 shadow-sm focus:border-sky-400 focus:ring-sky-400 disabled:bg-gray-200" placeholder="Telefon" required x-model="data.phone" :disabled="success">
                                     </div>
                                     <div>
                                         <button class="inline-flex justify-center rounded-md border border-transparent bg-lime-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-lime-500 active:bg-lime-600 focus:outline-none focus:ring focus:ring-lime-600/50 transition-colors duration-100 disabled:opacity-50 disabled:hover:bg-lime-600 disabled:cursor-not-allowed" x-html="button" :disabled="loading ?? success">Send besked</button>
@@ -339,6 +334,7 @@
                                                         this.data.name = ""
                                                         this.data.email = ""
                                                         this.data.phone = ""
+                                                        this.data.birthdate = ""
                                                         this.data.message = ""
                                                         this.button = "Tak!"
                                                         this.message = "Din besked er nu sendt, du hører fra os snarest."
