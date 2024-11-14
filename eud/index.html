@@ -343,6 +343,7 @@
                                                         this.message = "Din besked er nu sendt, du hører fra os snarest."
 
                                                         snaptr('track', 'SIGN_UP', {'sign_up_method': 'Form', 'uuid_c1': this.uuid() })
+                                                        ttq.track('SubmitForm', {'contents': [{'content_name': 'SIGN_UP'}]}, {'event_id': this.uuid() })
                                                     })
                                                     .catch(() => {
                                                         this.button = "Send besked"
