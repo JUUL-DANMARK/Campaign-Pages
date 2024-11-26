@@ -267,6 +267,14 @@
                 x-trap.noscroll.inert="modal"
                 class="relative w-full max-w-2xl overflow-y-auto rounded-xl bg-white p-12 shadow-lg"
             >
+                <div class="absolute top-6 right-0">
+                    <button x-on:click="modal = false" type="button" class="group relative z-10 -m-2 inline-flex h-8 w-8 items-center justify-center rounded-lg p-2 mr-3 md:mr-4 bg-gray-100 hover:bg-gray-200 ui-not-focus-visible:outline-none" aria-label="Luk tilmelding">
+                        <svg aria-hidden="true" class="h-3.5 w-3.5 overflow-visible stroke-neutral-500 group-active:stroke-black" fill="none" stroke-width="2" stroke-linecap="round">
+                            <path d="M2 2L12 12M12 2L2 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
                 <!-- Title -->
                 <h3 class="text-3xl font-bold" :id="$id('modal-title')">Hør mere om JUUL Erhvervsuddannelser</h3>
 
@@ -366,12 +374,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="flex justify-end">
-                    <button type="button" x-on:click="modal = false" class="rounded-md border border-gray-200 bg-gray-50 px-5 py-2.5 shadow-sm hover:bg-white">
-                        Luk
-                    </button>
                 </div>
             </div>
         </div>
