@@ -6,4 +6,7 @@
     [x-cloak] {
         display: none !important;
     }
+    body {
+        @apply selection:bg-lime-500/25;
+    }
 }
