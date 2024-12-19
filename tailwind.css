@@ -10,6 +10,6 @@
         @apply selection:bg-lime-500/25;
     }
     #chat-widget-container {
-        z-index: 10 !important;
+        @apply !z-20;
     }
 }
