@@ -5,6 +5,7 @@ module.exports = {
   content: [
     './*.{html,js}',
     './**/*.html',
+    '!./**/node_modules/**',
   ],
   theme: {
     fontFamily: {
