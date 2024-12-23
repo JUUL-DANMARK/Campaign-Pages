@@ -407,7 +407,7 @@
                             <div class="mx-auto max-w-lg rounded-lg bg-gray-50 p-6 lg:max-w-none">
                                 <form x-data="form()" @submit.prevent="submit()" class="grid grid-cols-1 gap-y-6">
                                     <input type="text" name="honeypot" class="hidden" x-cloak>
-                                    <input type="hidden" name="subject" value="Henvendelse fra Erhvervsskole.dk" />
+                                    <input type="hidden" name="subject" value="Generel henvendelse til JUUL Erhvervsskole" x-model="data.subject" />
                                     <input type="hidden" name="replyTo" value="@">
                                     <div>
                                         <label for="full-name" class="sr-only">Navn</label>
@@ -435,6 +435,7 @@
                                     function form() {
                                         return {
                                             data: {
+                                                subject: "",
                                                 name: "",
                                                 email: "",
                                                 phone: "",
@@ -466,7 +467,7 @@
                                                         this.button = "Tak!"
                                                         this.message = "Din besked er nu sendt, du hører fra os snarest."
 
-                                                        fathom.trackEvent('Kontaktformular');
+                                                        fathom.trackEvent('Kontaktform > EUD Generelt');
                                                         snaptr('track', 'SIGN_UP', {'sign_up_method': 'Form', 'uuid_c1': this.uuid() })
                                                         ttq.track('SubmitForm', {'contents': [{'content_name': 'SIGN_UP'}]}, {'event_id': this.uuid() })
                                                     })
